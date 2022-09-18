@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/owfont-regular.css">
+    <title>momentum</title>
+</head>
+<body>
+<div class="momentum img-fond">
+    <header>
+        <div class="player">
+            <div class="controls">
+                <div class="player-prev"></div>
+                <div class="player-play"></div>
+                <div class="player-next"></div>
+            </div>
+            <div class="duration-timer">
+                <div class="duration-slide-container">
+                    <input type="range" min="0" max="0" value="0" class="duration-slider">
+                </div>
+                <span class="currently-time">0:00</span>
+                <span>/</span>
+                <span class="duration">0:00</span>
+            </div>
+            <div class="volume-slide-container">
+                <input type="range" min="0" max="100" value="50" class="volume-slider">
+                <div class="svg-volume"></div>
+            </div>
+            <div class="tracks">
+                <div class="track">
+                    <div class="track-ico"></div>
+                    <span>Сваты - Погоня</span></div>
+                <div class="track">
+                    <div class="track-ico"></div>
+                    <span>Сваты - Зарядка</span></div>
+                <div class="track">
+                    <div class="track-ico"></div>
+                    <span>Сваты - Инструментал</span></div>
+                <div class="track">
+                    <div class="track-ico"></div>
+                    <span>Сваты - Календарь</span></div>
+                <div class="track">
+                    <div class="track-ico"></div>
+                    <span>Гимн Канады</span></div>
+            </div>
+        </div>
+        <div class="weather">
+            <input type="text" class="input-weather" placeholder="[Введите город]">
+            <div class="line"></div>
+            <span class="error-text hide"></span>
+            <div class="contain-weather">
+                <i class="weather-icon owf" style="font-size: 48px"></i>
+                <div class="temperature"></div>
+                <div class="weather-description"></div>
+                <div class="wind-speed"></div>
+                <div class="humidity"></div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="slide-prev arrow"></div>
+        <div class="clock">
+            <div class="time">time</div>
+            <div class="date">date</div>
+            <div class="main-greeting">
+                <span class="greeting">greetings</span>
+                <input type="text" class="input-name" placeholder="[Введите имя]">
+            </div>
+        </div>
+        <div class="slide-next arrow"></div>
+    </main>
+    <footer>
+        <div class="settings">
+            <div class="btn-setting"></div>
+            <div class="menu-settings"></div>
+        </div>
+        <div class="main-quote">
+            <div class="btn-update-quote"></div>
+            <span class="text-quote"></span>
+            <span class="author"></span>
+        </div>
+        <div class="main-todo">
+            <span class="btn-todo"></span>
+            <div class="todo-list"></div>
+        </div>
+    </footer>
+</div>
+
+<div class="popup-setting hide">
+    <div class="popup-setting-body">
+
+        <h3 class="setting my-h">Настройки</h3>
+
+        <h4 class="display my-h">Отображать:</h4>
+        <div class="setting-type"><span class="is-player-text">Музыка</span>
+            <input class="toggle-is-player" type="checkbox" checked>
+        </div>
+        <div class="line"></div>
+        <div class="setting-type"><span class="is-weather-text">Погода</span>
+            <input class="toggle-is-weather" type="checkbox" checked>
+        </div>
+        <div class="line"></div>
+        <div class="setting-type"><span class="is-clock-text">Часы</span>
+            <input class="toggle-is-clock" type="checkbox" checked>
+        </div>
+        <div class="line"></div>
+        <div class="setting-type"><span class="is-greeting-text">Приветствие</span>
+            <input class="toggle-is-greeting" type="checkbox" checked>
+        </div>
+        <div class="line"></div>
+        <div class="setting-type"><span class="is-quote-text">Цитаты</span>
+            <input class="toggle-is-quote" type="checkbox" checked>
+        </div>
+        <div class="line"></div>
+
+        <h4 class="photo-source my-h">Источник фото:</h4>
+        <div class="setting-type">
+            <span>GitHub</span>
+            <input class="setting-API" type="radio" name="photo-source" value="git" checked>
+        </div>
+        <div class="line"></div>
+
+        <div class="setting-type">
+            <span>Unsplash API</span>
+            <input class="setting-API" type="radio" name="photo-source" value="unsplash">
+        </div>
+        <div class="line"></div>
+
+        <div class="setting-type">
+            <span>Flickr API</span>
+            <input class="setting-API" type="radio" name="photo-source" value="flickr">
+        </div>
+        <div class="line"></div>
+
+        <h4 class="application-language my-h">Язык приложения:</h4>
+        <div class="setting-type">
+            <span>ru-Ru</span>
+            <input class="setting-language" type="radio" name="setting-language" value="ru-RU" checked>
+        </div>
+        <div class="line"></div>
+
+        <div class="setting-type">
+            <span>en-US</span>
+            <input class="setting-language" type="radio" name="setting-language" value="en-US">
+        </div>
+        <div class="line"></div>
+    </div>
+</div>
+<script type="module" src="js/setting.js"></script>
+<script type="module" src="js/clock.js"></script>
+<script type="module" src="js/Greeting.js"></script>
+<script type="module" src="js/fond-img.js"></script>
+<script type="module" src="js/weather.js"></script>
+<script type="module" src="js/quotes.js"></script>
+<script type="module" src="js/player.js"></script>
+</body>
+</html>
